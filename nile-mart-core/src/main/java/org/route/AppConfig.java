@@ -8,14 +8,14 @@ import java.math.BigDecimal;
 
 
 @Configuration
-@ComponentScan
+@ComponentScan (basePackages = "org.route")
 //@ImportResource("/beans.xml")
 @PropertySource("/application.properties")
 @EnableAspectJAutoProxy
 public class AppConfig {
 
     @Bean
-    PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+   public  PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
 
